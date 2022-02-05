@@ -9,14 +9,17 @@ export class UsersService {
     private users: User[] = [
         { id: 0, username: 'testChad', password: 'testPassChad', providerId: 0, name: 'Chad' },
         { id: 1, username: 'testBob', password: 'testPassBob', providerId: 1, name: 'Bob' },
-        { id: 2, username: 'testTina', password: 'testPassTina', providerId: 0,name: 'Tina' },
-        { id: 3, username: 'testShannon', password: 'testPassShannon', providerId: 0,name: 'Shannon' },
+        { id: 2, username: 'testTina', password: 'testPassTina', providerId: 0, name: 'Tina' },
+        { id: 3, username: 'testShannon', password: 'testPassShannon', providerId: 0, name: 'Shannon' },
         { id: 4, username: 'testKelly', password: 'testPassKelly', providerId: 2, name: 'Kelly' }
     ];
 
-    async findOne(username: string): Promise<User | undefined> {
-        return this.users.find(user => user.username === username);
+    async findOne(username: string, providerId: number): Promise<User | undefined> {
+        return this.users.find(user => (user.username === username && user.providerId === providerId));
     }
+
+
+
 
 
 
