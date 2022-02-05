@@ -1,9 +1,17 @@
 import { Injectable } from '@nestjs/common';
 import { CreateProviderDto } from './dto/create-provider.dto';
 import { UpdateProviderDto } from './dto/update-provider.dto';
+import { Provider } from './entities/provider.entity';
 
 @Injectable()
 export class ProvidersService {
+
+  // static array of providers
+  // utilized for querying since database will not be used in this project
+  private providers: Provider[] = [
+    { id: 0, name: 'Progressive' }
+  ];
+
   create(createProviderDto: CreateProviderDto) {
     return 'This action adds a new provider';
   }
