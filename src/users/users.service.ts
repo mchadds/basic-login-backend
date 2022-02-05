@@ -6,10 +6,19 @@ import { User } from './entities/user.entity';
 export class UsersService {
     // static array of users
     // utilized for querying since database will not be used in this project
-    private users: User[] = [{ id: 0, name: 'Chad' }];
+    private users: User[] = [
+        { id: 0, name: 'Chad' },
+        { id: 1, name: 'Bob' },
+        { id: 2, name: 'Tina' },
+        { id: 3, name: 'Shannon' },
+        { id: 4, name: 'Kelly' }
+    ];
 
     // return all users
-    findAll(): User[] {
+    findAll(name?: string): User[] {
+        if (name) {
+            return this.users.filter(user => user.name === name);
+        }
         return this.users;
     }
 
