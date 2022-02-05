@@ -8,7 +8,7 @@ export class User {
     id: number;
 
     @ApiProperty()
-    userName: string;
+    username: string;
 
     @ApiProperty()
     password: string;
