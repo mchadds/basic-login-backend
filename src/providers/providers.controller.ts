@@ -12,23 +12,22 @@ export class ProvidersController {
 
     // clarify the OK response from the API
     @ApiOkResponse({type: Provider, isArray: true})
-    // indicate optional parameters
-    @ApiQuery({name: 'name', required: false})
     // get all users
     @Get()
-    getUsers(@Query('name') name: string): Provider[] {
-        return this.providersService.findAll(name);
+    getUsers(): Provider[] {
+        return this.providersService.findAll();
     }
 
     // clarify the OK response from the API
     @ApiOkResponse({type: Provider})
     @ApiNotFoundResponse()
+    // EXTENDED FUNCTIONALITY
     // get specific user based off id
     @Get(':id')
     getUserById(@Param('id', ParseIntPipe) id: number): Provider {
-
+        // retrieve user with specific id
         const user = this.providersService.findById(Number(id));
-
+        
         if (!user) {
             throw new NotFoundException();
         }

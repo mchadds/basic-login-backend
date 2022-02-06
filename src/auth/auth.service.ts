@@ -5,11 +5,11 @@ import { UsersService } from 'src/users/users.service';
 export class AuthService {
     constructor(private usersService: UsersService) {}
 
+    // check if there is a user that matches the username, password, and providerId
     async validateUser(username: string, password: string, providerId: number): Promise<any> {
         const user = await this.usersService.findOne(username, providerId);
 
         if (user && user.password === password) {
-
             // return all other properties except username and password
             const { password, username, ...rest } = user
             return rest;
