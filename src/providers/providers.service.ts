@@ -7,8 +7,8 @@ export class ProvidersService {
     // static array of providers
     // utilized for querying since database will not be used in this project
     private providers: Provider[] = [
-        { id: 0, name: 'Progressive' },
-        { id: 1,  name: 'Liberty Mutual' }
+        { id: 1, name: 'Progressive' },
+        { id: 2,  name: 'Liberty Mutual' }
     ];
 
     // return all providers

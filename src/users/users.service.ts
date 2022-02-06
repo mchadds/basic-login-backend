@@ -7,11 +7,11 @@ export class UsersService {
     // static array of users
     // utilized for querying since database will not be used in this project
     private users: User[] = [
-        { id: 0, username: 'testChad', password: 'testPassChad', providerId: 0, name: 'Chad' },
-        { id: 1, username: 'testBob', password: 'testPassBob', providerId: 1, name: 'Bob' },
-        { id: 2, username: 'testTina', password: 'testPassTina', providerId: 0, name: 'Tina' },
-        { id: 3, username: 'testShannon', password: 'testPassShannon', providerId: 0, name: 'Shannon' },
-        { id: 4, username: 'testKelly', password: 'testPassKelly', providerId: 2, name: 'Kelly' }
+        { id: 1, username: 'testChad', password: 'testPassChad', providerId: 1, name: 'Chad' },
+        { id: 2, username: 'testBob', password: 'testPassBob', providerId: 1, name: 'Bob' },
+        { id: 3, username: 'testTina', password: 'testPassTina', providerId: 2, name: 'Tina' },
+        { id: 4, username: 'testShannon', password: 'testPassShannon', providerId: 2, name: 'Shannon' },
+        { id: 5, username: 'testKelly', password: 'testPassKelly', providerId: 2, name: 'Kelly' }
     ];
 
     async findOne(username: string, providerId: number): Promise<User | undefined> {
