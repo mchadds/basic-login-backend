@@ -28,7 +28,7 @@ Swagger documentation on the endpoints can be found at the localhost url + /
 - [Nest.js](https://nestjs.com/) A progressive Node.js framework
 - [Passport](https://www.passportjs.org/docs/) Passport is middleware for Node.js that makes it easy to implement authentication and authorization
 - [Swagger](https://swagger.io/docs/) Swagger can help you design and document your APIs at scale
-- 
+
 ## Languages
 - [TypeScript](https://www.typescriptlang.org/)
 
@@ -46,7 +46,7 @@ $ npm install
 $ npm run start:dev
 ```
 
-Runs the app in the development mode.
+Run the app in the development mode.
 Open [http://localhost:3000](http://localhost:3000) if the front end of the application is started first or [http://localhost:3001](http://localhost:3001) if the backend of the application is started first 
 
 
