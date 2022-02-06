@@ -1,6 +1,5 @@
 import { Controller, Get, Post, Request, UseGuards } from '@nestjs/common';
 import { ApiOkResponse, ApiTags } from '@nestjs/swagger';
-import { AppService } from './app.service';
 import { LocalAuthGuard } from './auth/local-auth.guard';
 
 @ApiTags('login')
