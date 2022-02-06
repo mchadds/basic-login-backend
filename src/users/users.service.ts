@@ -18,12 +18,6 @@ export class UsersService {
         return this.users.find(user => (user.username === username && user.providerId === providerId));
     }
 
-
-
-
-
-
-
     // return all users
     findAll(name?: string): User[] {
         if (name) {
@@ -32,6 +26,7 @@ export class UsersService {
         return this.users;
     }
 
+    // EXTENDED FUNCTIONALITY
     // return specific user based on id
     findById(userId: number): User {
         return this.users.find(user => user.id === userId);  

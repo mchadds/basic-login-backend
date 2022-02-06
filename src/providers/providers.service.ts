@@ -12,10 +12,7 @@ export class ProvidersService {
     ];
 
     // return all providers
-    findAll(name?: string): Provider[] {
-        if (name) {
-            return this.providers.filter(provider => provider.name === name);
-        }
+    findAll(): Provider[] {
         return this.providers;
     }
 
