@@ -6,7 +6,7 @@
 [circleci-url]: https://circleci.com/gh/nestjs/nest
 
 
-# Basic Login Backend (API)
+# Login Backend (API)
 
 ## Description
 This project is the backend (API) portion of a basic login application. It calls a local frontend project [basic-login-frontend](https://github.com/mchadds/basic-login-frontend)
